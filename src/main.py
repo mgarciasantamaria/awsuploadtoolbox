@@ -127,7 +127,7 @@ if __name__ == '__main__':
                                         object_name=f"{channel}/{VOD_Pack}/{File}"
                                         try:
 #-------------------------------------------Se utiliza el metodo para subir el archivo al bucket
-                                            s3.upload_file(file_Path, Bucket, object_name)
+                                            s3.upload_file(file_Path, Bucket, object_name, Config=boto3.s3.transfer.TransferConfig(max_bandwidth=30000000))
 #-------------------------------------------Captura del dato de fecha y hora de la subida del archivo
                                             Counter_xmls+=1
                                             Counter+=1
@@ -152,7 +152,7 @@ if __name__ == '__main__':
                                     object_name=f"{channel}/{VOD_Pack}/{File}"
                                     try:
 #---------------------------------------Se utiliza el metodo para subir el archivo al bucket
-                                        s3.upload_file(file_Path, Bucket, object_name)
+                                        s3.upload_file(file_Path, Bucket, object_name, Config=boto3.s3.transfer.TransferConfig(max_bandwidth=30000000))
 #---------------------------------------Aumenta en 1 el contador de files subidos a S3
                                         Counter_videos+=1
                                         Counter+=1
@@ -174,7 +174,7 @@ if __name__ == '__main__':
                                     object_name=f"{channel}/{VOD_Pack}/{File}"
                                     try:
 #---------------------------------------Se utiliza el metodo upload para subir el archivo al bucket
-                                        s3.upload_file(file_Path, Bucket, object_name)
+                                        s3.upload_file(file_Path, Bucket, object_name, Config=boto3.s3.transfer.TransferConfig(max_bandwidth=30000000))
 #---------------------------------------Captura del dato de fecha y hora
                                         date=str(datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S'))
 #---------------------------------------Aumenta el contador de files subidos a S3 en 1
