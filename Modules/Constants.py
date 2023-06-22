@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #_*_ codig: utf8 _*_
-source_Path="/mnt/evo8/Aspera/CABLEOPERADORES/VODTOOLBOX_VCMBOG"
+source_Path="/mnt/Aspera/CABLEOPERADORES/VODTOOLBOX_VCMBOG"
 Mail_to="ingenieriavod@vcmedios.com.co"
 Channels={
     'A&E':'aenla-in-toolbox',
